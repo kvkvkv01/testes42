@@ -27,6 +27,16 @@ int	ft_strlen(char *str);
 void	ft_rev_int_tab(int *tab, int size);
 void	ft_sort_int_tab(int *tab, int size);
 
+extern void	ft_ft(int *nbr) __attribute__((weak));
+extern void	ft_ultimate_ft(int *********nbr) __attribute__((weak));
+extern void	ft_swap(int *a, int *b) __attribute__((weak));
+extern void	ft_div_mod(int a, int b, int *div, int *mod) __attribute__((weak));
+extern void	ft_ultimate_div_mod(int *a, int *b) __attribute__((weak));
+extern void	ft_putstr(char *str) __attribute__((weak));
+extern int	ft_strlen(char *str) __attribute__((weak));
+extern void	ft_rev_int_tab(int *tab, int size) __attribute__((weak));
+extern void	ft_sort_int_tab(int *tab, int size) __attribute__((weak));
+
 /* ********************** */
 /* 	   Tests	  */
 /* ********************** */
@@ -172,70 +182,102 @@ int test_ft_sort_int_tab(void)
 
 int	main(void)
 {
-	int	ft_ft;
-	int	ft_ultimate_ft;
-	int	ft_swap;
-	int	ft_div_mod;
-	int	ft_ultimate_div_mod;
-	int	ft_strlen;
-	int	ft_rev_int_tab;
-	int	ft_sort_int_tab;
+	int	result;
 
 	// ex00
-	ft_ft = test_ft_ft();
-	if (ft_ft == 1)
-		printf(" ✔ Success! :D | /ex00/ft_ft.c\n");
-	else
-		return (0);
+	if (ft_ft != NULL) {
+		result = test_ft_ft();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex00/ft_ft.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex00/ft_ft.c\n");
+	} else {
+		printf(" - Not implemented | /ex00/ft_ft.c\n");
+	}
 	
 	// ex01
-	ft_ultimate_ft = test_ft_ultimate_ft();
-	if (ft_ultimate_ft == 1)
-		printf(" ✔ Success! :D | /ex01/ft_ultimate_ft.c\n");
-	else
-		return (0);
+	if (ft_ultimate_ft != NULL) {
+		result = test_ft_ultimate_ft();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex01/ft_ultimate_ft.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex01/ft_ultimate_ft.c\n");
+	} else {
+		printf(" - Not implemented | /ex01/ft_ultimate_ft.c\n");
+	}
 	
 	// ex02
-	ft_swap = test_ft_swap();
-	if (ft_swap == 1)
-		printf(" ✔ Success! :D | /ex02/ft_swap.c\n");
-	else
-		return (0);
+	if (ft_swap != NULL) {
+		result = test_ft_swap();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex02/ft_swap.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex02/ft_swap.c\n");
+	} else {
+		printf(" - Not implemented | /ex02/ft_swap.c\n");
+	}
 	
 	// ex03
-	ft_div_mod = test_ft_div_mod();
-	if (ft_div_mod == 1)
-		printf(" ✔ Success! :D | /ex03/ft_div_mod.c\n");
-	else
-		return (0);
+	if (ft_div_mod != NULL) {
+		result = test_ft_div_mod();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex03/ft_div_mod.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex03/ft_div_mod.c\n");
+	} else {
+		printf(" - Not implemented | /ex03/ft_div_mod.c\n");
+	}
 	
 	// ex04
-	ft_ultimate_div_mod = test_ft_ultimate_div_mod();
-	if (ft_ultimate_div_mod == 1)
-		printf(" ✔ Success! :D | /ex04/ft_ultimate_div_mod.c\n");
-	else
-		return (0);
+	if (ft_ultimate_div_mod != NULL) {
+		result = test_ft_ultimate_div_mod();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex04/ft_ultimate_div_mod.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex04/ft_ultimate_div_mod.c\n");
+	} else {
+		printf(" - Not implemented | /ex04/ft_ultimate_div_mod.c\n");
+	}
 	
 	// ex05
-	ft_putstr(" ✔ Success! :D | /ex05/ft_putstr.c\n");
+	if (ft_putstr != NULL) {
+		ft_putstr(" ✔ Success! :D | /ex05/ft_putstr.c\n");
+	} else {
+		printf(" - Not implemented | /ex05/ft_putstr.c\n");
+	}
 	
 	// ex06
-	ft_strlen = test_ft_strlen();
-	if (ft_strlen == 1)
-		printf(" ✔ Success! :D | /ex06/ft_strlen.c\n");
-	else
-		return (0);
+	if (ft_strlen != NULL) {
+		result = test_ft_strlen();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex06/ft_strlen.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex06/ft_strlen.c\n");
+	} else {
+		printf(" - Not implemented | /ex06/ft_strlen.c\n");
+	}
 
 	// ex07
-	ft_rev_int_tab = test_ft_rev_int_tab();
-	if (ft_rev_int_tab == 1)
-		printf(" ✔ Success! :D | /ex07/ft_rev_int_tab.c\n");
-	else
-		return (0);
+	if (ft_rev_int_tab != NULL) {
+		result = test_ft_rev_int_tab();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex07/ft_rev_int_tab.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex07/ft_rev_int_tab.c\n");
+	} else {
+		printf(" - Not implemented | /ex07/ft_rev_int_tab.c\n");
+	}
+
 	// ex08	
-	ft_sort_int_tab = test_ft_sort_int_tab();
-	if (ft_sort_int_tab == 1)
-		printf(" ✔ Success! :D | /ex08/ft_sort_int_tab.c\n");
-	else
-		return (0);
-    }
+	if (ft_sort_int_tab != NULL) {
+		result = test_ft_sort_int_tab();
+		if (result == 1)
+			printf(" ✔ Success! :D | /ex08/ft_sort_int_tab.c\n");
+		else
+			printf(" ✖ Failed! :( | /ex08/ft_sort_int_tab.c\n");
+	} else {
+		printf(" - Not implemented | /ex08/ft_sort_int_tab.c\n");
+	}
+
+	return (0);
+}
